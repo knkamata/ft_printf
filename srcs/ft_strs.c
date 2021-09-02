@@ -10,14 +10,20 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_putstr(char *s)
+char	*ft_strchr(const char *s, int c)
 {
-	int	len;
+	size_t	i;
 
-	if (!s)
-		return (0);
-	len = write(1, s, ft_strlen(s));
-	return (len);
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i++;
+	}
+	if ((char)c == '\0')
+		return ((char *)(s + i));
+	return (NULL);
 }
 
 static int	ft_check_base(char *base)

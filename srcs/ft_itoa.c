@@ -1,6 +1,24 @@
 #include "../ft_printf.h"
 
-static size_t	ft_numlen(long n)
+size_t	ft_numlen_base(size_t n, int base)
+{
+	size_t	len;
+
+	len = 0;
+	if (n == 0)
+	{
+		len++;
+		return (len);
+	}
+	while (n > 0)
+	{
+		len++;
+		n /= base;
+	}
+	return (len);
+}
+
+size_t	ft_numlen(long n)
 {
 	size_t	len;
 

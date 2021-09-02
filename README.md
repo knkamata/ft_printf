@@ -7,8 +7,7 @@ int	ft_printf(const char *format, ...);
 ```
 
 ### Description
-`ft_printf()` covers only `cspdiuxX%` specifiers.
-`ft_printf()` supports `-0.# +` formats.
+`ft_printf()` covers `cspdiuxX%` specifiers and `-0.# +` formatters.
 
 ### Return Value
 `ft_printf()` returns the number of characters printed.
